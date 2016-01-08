@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"Calcul d'IMC"</string>
+    <string name="action_help">Aide</string>
+    <string name="title_activity_about">À propos</string>
+    <string name="action_settings">Settings</string>
+    <string name="developed_by">Application développée par</string>
+    <string name="moto">Dieu peut vous donner plus</string>
+    <string name="dialog_help_title">Aide</string>
+    <string name="dialog_help">Vous pouvez calculer votre Indice de Masse  Corporelle en utilisant cette application.\n\nPour le faire, veuillez entrer votre poids en Kliogrammes, puis votre taille.</string>
+    <string name="empty_fields">Veuillez remplir tous les champs!</string>
+    <string name="small_size">Tailles trop petites!</string>
+    <string name="metre">Mètre</string>
+    <string name="centimetre">Centimètre</string>
+    <string name="cancel">Annuler</string>
+    <string name="raz">RÀZ</string>
+    <string name="calculer">Calculer</string>
+    <string name="hint_taille">Taille</string>
+    <string name="hint_poids">Poids (Kg)</string>
+    <string name="mega_function">Méga fonction!</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="screen_placeholder">Veuillez taper sur "Calculer"</string>
+    <string name="mega_function_key">Vous faites un poids parait!</string>
+    <string name="bmi">"IMC: "</string>
+    <string name="clipboard_notif">Copié avec succès</string>
+    <string name="dialog_about"><![CDATA[         Calcul d\'IMC est développée par <b>Seth-Pharès Gnavo</b>.<br/>
+    <a href=\'https://about.me/sgnavo\'>Site Web</a>&nbsp;&nbsp;
+    <a href=\'https://twitter.com/pharesgnavo\'>Twitter</a>&nbsp;&nbsp;
+    <a href=\'https://facebook.com/sgnavogollar\'>Facebook</a>&nbsp;&nbsp;
+    <a href=\'https://google.com/+SethPharèsGnavo7\'>Google+</a>&nbsp;&nbsp;
+    <a href=\'https://github.com/sgnavo\'>GitHub</a>&nbsp;&nbsp;
+    <a href=\'https://www.linkedin.com/in/seth-pharès-gnavo-2978739a\'>LinkedIn</a>     ]]></string>
+    <string name="dialog_dismiss">Annuler</string>
+    <string name="action_about">À propos</string>
+    <string name="dialog_about_title">"Calcul d'IMC 0.2.0"</string>
+</resources>
