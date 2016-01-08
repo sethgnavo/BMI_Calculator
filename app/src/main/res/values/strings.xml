@@ -28,7 +28,7 @@
     <string name="mega_function_key">You have a perfect weight!</string>
     <string name="bmi">"BMI: "</string>
     <string name="clipboard_notif">Copied to clipboard</string>
-    <string name="dialog_about"><![CDATA[         BMI Calculator, an app designed by <b>Seth-Pharès Gnavo</b>.<br/>
+    <string name="dialog_about"><![CDATA[         BMI Calculator, an application designed by <b>Seth-Pharès Gnavo</b>.<br/>
     <a href=\'https://about.me/sgnavo\'>Website</a>&nbsp;&nbsp;
     <a href=\'https://twitter.com/pharesgnavo\'>Twitter</a>&nbsp;&nbsp;
     <a href=\'https://facebook.com/sgnavogollar\'>Facebook</a>&nbsp;&nbsp;
