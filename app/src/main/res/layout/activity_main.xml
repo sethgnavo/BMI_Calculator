@@ -14,7 +14,7 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/result"
+        android:layout_below="@+id/result_container"
         android:paddingTop="8dp">
 
         <RelativeLayout
@@ -26,12 +26,12 @@
                 android:id="@+id/group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/Textig"
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
                 android:checkedButton="@+id/radio2"
-                android:layout_below="@+id/Textig"
-                android:orientation="horizontal"
-                android:gravity="center_horizontal">
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/radio1"
@@ -51,8 +51,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/mega"
-                android:layout_toRightOf="@+id/calcul"
                 android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/calcul"
                 android:text="@string/raz" />
 
 
@@ -61,8 +61,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/mega"
-                android:text="@string/calculer"
                 android:background="@drawable/btn_layout"
+                android:text="@string/calculer"
                 android:textColor="#fff" />
 
             <CheckBox
@@ -85,11 +85,11 @@
                     android:id="@+id/poids"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edittext"
                     android:ems="10"
-                    android:hint="@string/hint_poids"
 
-                    android:inputType="numberDecimal"
-                    android:background="@drawable/bg_edittext" />
+                    android:hint="@string/hint_poids"
+                    android:inputType="numberDecimal" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -105,32 +105,48 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txt_app_author"
+                    android:background="@drawable/bg_edittext"
                     android:ems="10"
                     android:hint="@string/hint_taille"
-                    android:inputType="numberDecimal"
-                    android:background="@drawable/bg_edittext" />
+                    android:inputType="numberDecimal" />
             </android.support.design.widget.TextInputLayout>
 
         </RelativeLayout>
     </ScrollView>
 
-    <TextView
-        android:id="@+id/result"
+
+    <LinearLayout
+        android:id="@+id/result_container"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="@drawable/dialog_clone"
-        android:clickable="true"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:gravity="center_horizontal"
-        android:linksClickable="true"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/tool_bar"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp" />
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/dialog_clone"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:linksClickable="true"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/txt_user_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 </RelativeLayout>

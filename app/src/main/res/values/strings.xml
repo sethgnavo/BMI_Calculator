@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_about">About</string>
-    <string name="copyright" translatable="false">© 2015 Align Labs</string>
+    <string name="copyright" translatable="false">© 2016 Align Labs</string>
     <string name="action_help">Help</string>
     <string name="app_name">BMI Calculator</string>
     <string name="calculer">Ok</string>
@@ -23,18 +23,23 @@
     <string name="title_activity_about">About</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="title_activity_splash">Splash</string>
-    <string name="version_name" translatable="false">Version 0.2</string>
     <string name="screen_placeholder">Please tap on "Calculate"</string>
     <string name="mega_function_key">You have a perfect weight!</string>
     <string name="bmi">"BMI: "</string>
     <string name="clipboard_notif">Copied to clipboard</string>
     <string name="dialog_about"><![CDATA[         BMI Calculator, an application designed by <b>Seth-Pharès Gnavo</b>.<br/>
     <a href=\'https://about.me/sgnavo\'>Website</a>&nbsp;&nbsp;
-    <a href=\'https://twitter.com/pharesgnavo\'>Twitter</a>&nbsp;&nbsp;
+    <a href=\'https://twitter.com/sethgnavo\'>Twitter</a>&nbsp;&nbsp;
     <a href=\'https://facebook.com/sgnavogollar\'>Facebook</a>&nbsp;&nbsp;
     <a href=\'https://google.com/+SethPharèsGnavo7\'>Google+</a>&nbsp;&nbsp;
-    <a href=\'https://github.com/sgnavo\'>GitHub</a>&nbsp;&nbsp;
+    <a href=\'https://github.com/sethgnavo\'>GitHub</a>&nbsp;&nbsp;
     <a href=\'https://www.linkedin.com/in/seth-pharès-gnavo-2978739a\'>LinkedIn</a>     ]]></string>
     <string name="dialog_dismiss">Dismiss</string>
     <string name="dialog_about_title">BMI Calculator 0.2.0</string>
+    <string name="action_update">Check for update</string>
+    <string name="user_under_weight">You are underweight!</string>
+    <string name="user_normal_weight">You have a normal weight</string>
+    <string name="user_overweight">You are overweight!</string>
+    <string name="app_update_wait">Please wait…</string>
+    <string name="app_update_offline">Check your network connection and retry.</string>
 </resources>

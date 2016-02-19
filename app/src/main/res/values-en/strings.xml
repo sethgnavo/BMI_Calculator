@@ -27,11 +27,17 @@
     <string name="clipboard_notif">Copied to clipboard</string>
     <string name="dialog_about"><![CDATA[         BMI Calculator is designed by <b>Seth-Pharès Gnavo</b>.<br/>
     <a href=\'https://about.me/sgnavo\'>Website</a>&nbsp;&nbsp;
-    <a href=\'https://twitter.com/pharesgnavo\'>Twitter</a>&nbsp;&nbsp;
+    <a href=\'https://twitter.com/sethgnavo\'>Twitter</a>&nbsp;&nbsp;
     <a href=\'https://facebook.com/sgnavogollar\'>Facebook</a>&nbsp;&nbsp;
     <a href=\'https://google.com/+SethPharèsGnavo7\'>Google+</a>&nbsp;&nbsp;
-    <a href=\'https://github.com/sgnavo\'>GitHub</a>&nbsp;&nbsp;
+    <a href=\'https://github.com/sethgnavo\'>GitHub</a>&nbsp;&nbsp;
     <a href=\'https://www.linkedin.com/in/seth-pharès-gnavo-2978739a\'>LinkedIn</a>     ]]></string>
     <string name="dialog_dismiss">Dismiss</string>
     <string name="dialog_about_title">BMI Calculator 0.2.0</string>
+    <string name="action_update">Check for update</string>
+    <string name="user_under_weight">You are underweight!</string>
+    <string name="user_normal_weight">You have a normal weight</string>
+    <string name="user_overweight">You are overweight!</string>
+    <string name="app_update_wait">Please wait…</string>
+    <string name="app_update_offline">Check your network connection and retry.</string>
 </resources>

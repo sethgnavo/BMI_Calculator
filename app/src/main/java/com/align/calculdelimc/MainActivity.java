@@ -3,11 +3,14 @@ package com.align.calculdelimc;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,15 +21,19 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import butterknife.ButterKnife;
+import com.github.javiersantos.appupdater.AppUpdater;
+import com.github.javiersantos.appupdater.enums.Display;
+import com.github.javiersantos.appupdater.enums.UpdateFrom;
 
 public class MainActivity extends AppCompatActivity {
+
+  //  Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+       // ButterKnife.bind(this);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
@@ -38,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
     private void setupLogic() {
         // La chaîne de caractères par défaut
         final String defaut = getString(R.string.screen_placeholder);
+
+        final String userUnderW = getString(R.string.user_under_weight);
+        final String userNormalW = getString(R.string.user_normal_weight);
+        final String userOverW = getString(R.string.user_overweight);
 
         final String bmi = getString(R.string.bmi);
 
@@ -51,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         final RadioGroup group = (RadioGroup) findViewById(R.id.group);
         final TextView result = (TextView) findViewById(R.id.result);
         final CheckBox mega = (CheckBox) findViewById(R.id.mega);
+        final TextView status = (TextView) findViewById(R.id.txt_user_status);
 
 
         final TextWatcher textWatcher = new TextWatcher() {
@@ -93,6 +105,16 @@ public class MainActivity extends AppCompatActivity {
                         float imc = pValue / tValue;
                         final String tresor = String.valueOf(imc);
                         result.setText(bmi + tresor);
+                        if (imc < 18.5f) {
+                            status.setText(userUnderW);
+                            status.setTextColor(getResources().getColor(R.color.md_blue_500));
+                        } else if (imc >= 18.5f && imc <= 24.9) {
+                            status.setText(userNormalW);
+                            status.setTextColor(getResources().getColor(R.color.md_green_500));
+                        } else {
+                            status.setText(userOverW);
+                            status.setTextColor(getResources().getColor(R.color.md_red_500));
+                        }
                     }
                 } else
                     result.setText(megaString);
@@ -105,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
                 poids.getText().clear();
                 taille.getText().clear();
                 result.setText(defaut);
+                status.setText("");
             }
         };
         envoyer.setOnClickListener(envoyerListener);
@@ -142,6 +165,25 @@ public class MainActivity extends AppCompatActivity {
             return true;
         } else if (id == R.id.action_about) {
             AboutDialog.show(this);
+        } else if (id == R.id.action_update) {
+
+            ConnectivityManager connMgr = (ConnectivityManager)
+                    getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+            if (networkInfo != null && networkInfo.isConnected()) {
+                Log.i("TAG", "User is connected to network");
+                Toast.makeText(MainActivity.this, getString(R.string.app_update_wait), Toast.LENGTH_SHORT).show();
+                new AppUpdater(MainActivity.this)
+                        .setUpdateFrom(UpdateFrom.GOOGLE_PLAY)
+                        .setDisplay(Display.DIALOG)
+                        .showAppUpdated(true)
+                        .showEvery(2)
+                        .start();
+
+            } else {
+                Log.i("TAG", "User is not connected to network");
+                Toast.makeText(MainActivity.this, getString(R.string.app_update_offline), Toast.LENGTH_SHORT).show();
+            }
         }
         return super.onOptionsItemSelected(item);
     }

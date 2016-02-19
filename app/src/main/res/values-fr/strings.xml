@@ -26,12 +26,18 @@
     <string name="clipboard_notif">Copié avec succès</string>
     <string name="dialog_about"><![CDATA[         Calcul d\'IMC est développée par <b>Seth-Pharès Gnavo</b>.<br/>
     <a href=\'https://about.me/sgnavo\'>Site Web</a>&nbsp;&nbsp;
-    <a href=\'https://twitter.com/pharesgnavo\'>Twitter</a>&nbsp;&nbsp;
+    <a href=\'https://twitter.com/sethgnavo\'>Twitter</a>&nbsp;&nbsp;
     <a href=\'https://facebook.com/sgnavogollar\'>Facebook</a>&nbsp;&nbsp;
     <a href=\'https://google.com/+SethPharèsGnavo7\'>Google+</a>&nbsp;&nbsp;
-    <a href=\'https://github.com/sgnavo\'>GitHub</a>&nbsp;&nbsp;
+    <a href=\'https://github.com/sethgnavo\'>GitHub</a>&nbsp;&nbsp;
     <a href=\'https://www.linkedin.com/in/seth-pharès-gnavo-2978739a\'>LinkedIn</a>     ]]></string>
     <string name="dialog_dismiss">Annuler</string>
     <string name="action_about">À propos</string>
     <string name="dialog_about_title">"Calcul d'IMC 0.2.0"</string>
+    <string name="action_update">Vérifier mise à jour</string>
+    <string name="user_under_weight">Vous êtes maigre!</string>
+    <string name="user_normal_weight">Vous avez un poids normal</string>
+    <string name="user_overweight">Vous êtes en surpoids!</string>
+    <string name="app_update_wait">Veuillez patienter…</string>
+    <string name="app_update_offline">Vérifiez votre connection Internet et réessayez.</string>
 </resources>
